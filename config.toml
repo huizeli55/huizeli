@@ -1,0 +1,213 @@
+baseURL = "https://www.huizeli.org/"
+languageCode = "en-us"
+theme = "aafu"
+
+[markup]
+taskLists = false
+
+[build]
+  writeStats = true
+
+
+[params]
+    title = "Huize Li"
+    author = "Huize"
+    description = "Huize's Homepage"
+    copyright = ""
+
+    [params.theme]
+        # Available themes are 'light', 'dark', 'ocean', and 'pinkish'
+        mainTheme = "pinkish"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = false
+        singlePage = false
+
+    [params.favicons]
+        use = true
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Huize Li"
+        tagline = "Doctor of Philosophy"
+        location = "Singapore, SG"
+        photo = "profile.jpg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            icon = "fab fa-linkedin-in"
+            url = "https://cn.linkedin.com/in/huize-li-6b7841129"
+            title = "LinkedIn"		
+       # [[params.social.list]]
+       #     icon = "fab fa-stack-overflow"
+       #     url = "#"
+       #     title = "StackOverflow"
+       # [[params.social.list]]
+       #     icon = "fab fa-github"
+       #     url = "#"
+       #     title = "GitHub"
+       # [[params.social.list]]
+       #     icon = "fab fa-twitter"
+       #     url = "#"
+       #     title = "Twitter"
+        [[params.social.list]]
+            icon = "fab fa-orcid"
+            url = "https://orcid.org/0000-0002-8710-4472"
+            title = "Orcid"
+        [[params.social.list]]
+            icon = "ai ai-google-scholar"
+            url = "https://scholar.google.com/citations?user=1gJ5xAsAAAAJ&hl=zh-CN"
+            title = "Google Scholar"
+        [[params.social.list]]
+            icon = "fab fa-researchgate"
+            url = "https://www.researchgate.net/profile/Huize-Li"
+            title = "ResearchGate"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "experience"
+    [[params.showInAccordion]]
+        item = "education"
+    [[params.showInAccordion]]
+        item = "publication"
+  #  [[params.showInAccordion]]
+  #      item = "project"
+  #  [[params.showInAccordion]]
+  #      item = "skill"
+    [[params.showInAccordion]]
+        item = "hobby"
+
+    [params.aboutme]
+        title = "About Me"
+        icon = "fas fa-user"
+        description = "I am currently (from 02/2023) a postdoctoral Research Fellow in [NUS SoC](https://www.comp.nus.edu.sg). I work in [eCO: Embedded COmputing Lab](https://www.comp.nus.edu.sg/~eco/index.html), leading by [Prof. Tulika Mitra](https://www.comp.nus.edu.sg/~tulika/). Before that, I am a Ph.D. student (2017-2022) in [HUST Department of Computer Science](http://english.cs.hust.edu.cn), mentored by [Prof. Hai Jin](https://cn.linkedin.com/in/jinhust?challengeId=AQEBReKwZzF4iAAAAYsc4bB0NcSwJ2M30fVhCB71dhh9z0RFra-PqJSa5sZoFAsc6n9JgG5Hj-UUw83P8QEIVuxPal1dkEXYpA&submissionId=c544d4a7-72f1-8c17-1f4d-a0ffc4658d0a&challengeSource=AgFqbRbvExMb7QAAAYsc4e8oUjMnbohliKBTmVpO8tOjKuWGJ1a2RWzGlfcdTT8&challegeType=AgEPF1MeuYflYwAAAYsc4e8s_uXGk_kbt6xQQgcHi584MIqCpoqc4fk&memberId=AgFTxsY0fO50JQAAAYsc4e8vKVWHXthru4fW624BmC1N3rs&recognizeDevice=AgGbEpa1qP93BQAAAYsc4e8yhF4HHn0K13dQZl00xN4CsuYYy3Iq). My research interests include computer architecture, emerging non-volatile memory, and in-memory computing. You can find my [CV](https://drive.google.com/file/d/1CBKm2B8gP_YbE_o5Y6IjYSs8i7GiBk63/view?usp=drive_link) here."
+
+    # Experience section
+    [params.experience]
+        title = "Experiences"
+        icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Research Fellow"
+            dates = "2023.02 - *Present*"
+            url = "https://www.comp.nus.edu.sg"
+            company = "School of Computing, National University of Singapore"
+            details = "I am working on designing high performance and high energy-efficiency accelerator for sparse Transformer."
+        
+
+    # Education section
+    [params.education]
+        title = "Education"
+        icon = "fas fa-graduation-cap"
+
+        [[params.education.list]]
+            degree = "Ph.D. in Engineering"
+            college = "Huazhong University of Science and Technology"
+            dates = "2017.09 - 2022.12"
+            thesis_title = "Processing-in-memory Architecture Based Structured Query Accelerators."
+         #   thesis_url = "#"
+        [[params.education.list]]
+            degree = "B.S. in Engineering"
+            college = "Huazhong University of Science and Technology"
+            dates = "2013.09 - 2017.06"
+
+    # Publication section
+    [params.publication]
+        title = "Publications"
+        icon = "fas fa-book"
+        #The order below determines the order in which the items appear in "Publications" section
+        format = ["date", "authors", "title", "journal"]
+        #If you don't want to group publications, comment the line below by adding # at the beginning
+        types = ["Conference Papers", "Journal Articles"]
+
+        [[params.publication.list]]
+            title = "ReSMA: accelerating approximate string matching using ReRAM-based content addressable memory."
+            authors = "Huize Li, Hai Jin, Long Zheng, Yu Huang, Xiaofei Liao, Zhuohui Duan, Dan Chen, and Chuangyi Gui"
+            date = "2022"
+            journal = "Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC'22), 991-996"
+            url = "https://dl.acm.org/doi/abs/10.1145/3489517.3530559"
+            type = "Conference Papers"
+
+        [[params.publication.list]]
+            title = "ReGNN: a ReRAM-based heterogeneous architecture for general graph neural networks."
+            authors = "Cong Liu, Haikun Liu, Hai Jin, Xiaofei Liao, Yu Zhang, Zhuohui Duan, Jiahong Xu, and Huize Li"
+            date = "2022"
+            journal = "Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC'22), 469-474"
+            url = "https://dl.acm.org/doi/abs/10.1145/3489517.3530479"
+            type = "Conference Papers"
+		
+        [[params.publication.list]]
+            title = "CPSAA: Accelerating Sparse Attention using Crossbar-based Processing-In-Memory Architecture."
+            authors = "Huize Li, Hai Jin, Long Zheng, Yu Huang, Xiaofei Liao, Dan Chen, Zhuohui Duan, Cong Liu, Jiahong Xu, and Chuanyi Gui"
+            date = "2022"
+            journal = "arXiv eprint (Accepted by TCAD)"
+            url = "https://arxiv.org/abs/2210.06696"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "ReCSA: a dedicated sort accelerator using ReRAM-based content addressable memory."
+            authors = "Huize Li, Hai Jin, Long Zheng, Yu Huang, and Xiaofei Liao"
+            date = "2022"
+            journal = "Frontiers of Computer Science (17), 172103"
+            url = "https://link.springer.com/article/10.1007/s11704-022-1322-3"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "ReSQM: Accelerating Database Operations Using ReRAM-Based Content Addressable Memory."
+            authors = "Huize Li, Hai Jin, Long Zheng, and Xiaofei Liao"
+            date = "2020"
+            journal = "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (11), 39: 4030-4041"
+            url = "https://ieeexplore.ieee.org/abstract/document/9211457"
+            type = "Journal Articles"
+
+
+            
+
+    # Project section
+ #   [params.project]
+ #       title = "Projects"
+ #       icon = "fas fa-project-diagram"
+#
+ #       [[params.project.list]]
+ #           title = "Project 1"
+ #           url = "#"
+ #           description = "Description of the project"
+        
+
+    # Skill section
+ #   [params.skill]
+  #      title = "Skills"
+  #      panelId = "skill-panel"
+  #      icon = "fas fa-cogs"
+#
+ #       [[params.skill.list]]
+  #          skill = "Skill 1, Skill 2"
+   #         skillrating = 90
+        
+
+    # Hobby section
+    [params.hobby]
+        title = "Hobbies"
+        icon = "fas fa-gamepad"
+
+        [[params.hobby.list]]
+            hobby = "Fitness"
+        [[params.hobby.list]]
+            hobby = "Dance"
+        [[params.hobby.list]]
+            hobby = "Swimming"
+        [[params.hobby.list]]
+            hobby = "Board Game"
